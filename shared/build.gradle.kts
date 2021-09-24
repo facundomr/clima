@@ -32,6 +32,9 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-core:$ktorVersion")
+                implementation("io.ktor:ktor-client-logging:$ktorVersion")
+
+                implementation("io.github.aakira:napier:2.1.0")
             }
         }
         val commonTest by getting {
