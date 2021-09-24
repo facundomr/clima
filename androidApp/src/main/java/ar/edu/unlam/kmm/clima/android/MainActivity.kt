@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             kotlin.runCatching {
                 repositorio.obtenerClima()
             }.onSuccess {
-                tv.text = it
+                tv.text = it.temperatura
             }
             .onFailure {
                 tv.text = it.toString()
