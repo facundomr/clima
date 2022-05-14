@@ -1,6 +1,6 @@
 plugins {
     kotlin("multiplatform")
-    kotlin("plugin.serialization") version "1.5.0"
+    kotlin("plugin.serialization") version "1.6.10"
     kotlin("native.cocoapods")
     id("com.android.library")
 }
@@ -43,6 +43,10 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
+
+                val coroutinesVersion = "1.6.0"
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
             }
         }
         val androidTest by getting {
